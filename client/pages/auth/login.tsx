@@ -32,6 +32,7 @@ function LoginPage() {
     string,
     AxiosError,
     Parameters<typeof login>["0"]
+    //@ts-ignore
   >(login, {
     onSuccess: () => {
       router.push("/");
