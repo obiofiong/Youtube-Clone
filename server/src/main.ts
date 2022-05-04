@@ -23,6 +23,9 @@ app.use(
 app.use(helmet());
 app.use(deserializeUser);
 
+app.get("/", (req, res) => {
+  res.send("Youtube Clone api is running");
+});
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/videos", videoRoute);
